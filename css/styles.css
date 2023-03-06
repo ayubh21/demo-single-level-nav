@@ -1,1 +1,76 @@
 /* dev styles go here */
+
+body {
+    font-family: sans-serif;
+}
+
+
+header {
+    background-color: #191919;
+}
+
+nav {
+    padding: 0.5rem;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+/* font styles go on the anchor tag directly */
+ul.menu a {
+    text-decoration: none;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    display: block;
+    /* to make this clickable area easier to tap, increase the size with display block and add some
+    clickable spacing to the left  */
+    padding: 0 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* 
+spacing and layout go on the li elements */
+
+ul.menu li {
+    line-height: 3.4375rem;
+    margin-bottom: 0.75rem;
+  
+}
+
+
+ul.menu a:hover,
+ul.menu a:active {
+    color: #39ff14;
+
+}
+ /* color property does not work on svg's */
+ul.menu svg {
+    width: 1.25rem;
+    fill: #f5f5f5;
+}
+
+ /* Whenever your overriding someone styles you have to do it directly on that element */
+ul.menu path,
+ul.menu rect {
+    fill:  #f5f5f5;
+}
+
+@media screen and (min-width: 34.375rem) {
+    ul.menu {
+        display: flex;
+        flex-flow:  wrap;
+        gap: 0.75rem;
+        
+    }
+    ul.menu li {
+        flex: 1 0 auto;
+        
+    }
+    ul.menu a {
+        justify-content: center;
+    }
+}
